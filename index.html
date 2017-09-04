@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Assignment 5.1</title>
+</head>
+<body>
+<h1>Please provide the radius to calculate area of cirlce.</h1>
+   <!-- Form to enter Radius of the Circle -->
+   <form action="" onsubmit="radius()" name="form1" id="form1">
+       Radius: <input type="number" name= a id="a"><br><br>       <!-- Radius Entry point -->
+               <input type="submit" value="Submit" name="submit"> <!-- Submit Input       -->
+   </form>
+  <script>
+  // Function declaration
+      function radius() 
+      {
+           var m = document.getElementById('a').value;   //Radius parameter passed
+           var Radius = parseInt(m);
+           if(isNaN(Radius)){
+            alert("Radius should be a number.")
+           }
+           else{
+            AreaC = area(Radius);                       // Area function invoked with paramter
+            alert("Area of circle is: " + AreaC);          //Alert message with out put
+           }
+      }
+      //Function with Parameter as radius
+      function area(Radius){
+            
+      return area = Radius * Radius * 3.14;
+      }
+  //End of Function declaration    
+  </script>
+</body>
+</html>
